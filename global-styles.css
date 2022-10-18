@@ -1,0 +1,40 @@
+/*------------------- FONTS -------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+
+
+/*------------------- COLORS -------------------*/
+:root {
+
+    --teal: #327B7A;
+    --offwhite: ;
+    --text-color: ;
+    --oath50: ;
+    --oath100: ;
+    --oath200: ;
+    --oath300: ;
+
+
+}
+
+
+
+/*------------------- FONTS -------------------*/
+
+
+
+
+/*------------------- HEADER -------------------*/
+
+
+
+
+
+/*------------------- SHARED COMPONENTS -------------------*/
+
+
+.button {
+    width: 380px;
+    height: auto;
+}
