@@ -11,33 +11,69 @@
     $headerheight: 3rem;
 /*------------------- COLORS -------------------*/
    
-    /*------------------- Main -------------------*/
+    /*------------------- Main Colors -------------------*/
     $teal: #327B7A;
     $offwhite: #FDFDFD;
-    $text: #403939;
+    $text-color: #403939;
     $container-color: #FDFDFD; 
 
-    /*------------------- Oath -------------------*/
+    /*------------------- Oath Color -------------------*/
     $oathlight: #6B6278;
     $oathmedium: #4A4458;
     $oathdark: #292336;
-    
+
 
 /*------------------- FONTS & TYPOGRAPHY -------------------*/
+    
     $poppins: 'Poppins', sans-serif; 
     $quicksand: 'Quicksand', sans-serif;
 
+    /* 0.5pxrem = 8px, 1rem = 16px, 1.5rem = 24px, 2rem = 32px */
+    $big-header: 2rem;
+    $h1-font-size: 1.5rem;
+    $h2-font-size: 1.25rem;
+    $h3-font-size: 1.125rem;
+    $normal-font-size: .938rem;
+    $small-font-size: .813rem;
+    $smaller-font-size: .75;
 
-/*------------------- FONT-SIZES -------------------*/
 
+/*--------------------- FONT WEIGHTS ----------------------*/
+    $light: 300;
+    $medium: 400;
+    $regular: 500;
+    $semibold: 600;
+    $bold: 700;
 
-/*------------------- FONTS WEIGHTS -------------------*/
-$light: 300;
-$medium: 400;
-$regular: 500;
-$semibold: 600;
-$bold: 700;
+/*------------------- MARGINS PADDINGS -------------------*/
+/* Using rem for more scaleability: 0.25pxrem = 4px, 0.5rem = 8px, 0.75rem = 12px, 1rem: 16px */
+    $mb-0-25: .25rem;
+    $mb-0-5: .5rem;
+    $mb-0-75: .75rem;
+    $mb-1: 1rem;
+    $mb-1-5: 1.5rem;
+    $mb-2: 2rem;
+    $mb-2-5: 2.5rem;
+    $mb-3: 3rem;
 
+/*------------------- z-index -------------------*/
+    $z-tooltip: 10;
+    $z-fixed: 100;
+    $z-modal: 100;
+
+/*------------------- FONT SIZE FOR LARGE SCREENS -------------------*/
+/* 0.5pxrem = 8px, 1rem = 16px, 1.5rem = 24px, 2rem = 32px */
+@media screen and (min-width: 968px) {
+    :root {
+        $big-header: 3rem;
+        $h1-font-size: 2.25rem;
+        $h2-font-size: 1.5rem;
+        $h3-font-size: 1.25rem;
+        $normal-font-size: 1rem;
+        $small-font-size: .875rem;
+        $smaller-font-size: .813rem;
+    }
+}
 
 
 /*------------------- HEADER -------------------*/
@@ -52,14 +88,16 @@ $bold: 700;
 
 /*------------------- REUSEABLEE CSS FOR COMPONENTS -------------------*/
 
-
-
-/*------------------- BASE -------------------*/
+.section
 
 .button {
     width: 380px;
     height: auto;
 }
+
+/*------------------- BASE -------------------*/
+
+
 * {
 
     box-sizing: border-box;
@@ -74,6 +112,30 @@ html {
 
 body {
     margin: 0 0 $headerheight 0;
+    font-family: $poppins;
+    background-color: $offwhite;
+    color: $text-color;
+}
 
+h1, h2, h3, h4 {
+    color: $text-color;
+    font-weight: $bold; 
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.section {
+    padding: 2rem;
+    
 }
 
