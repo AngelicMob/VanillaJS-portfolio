@@ -6,68 +6,68 @@
 
 :root {
   /*------------------- HEADER -------------------*/
-  $headerheight: 3rem;
+  --headerheight: 3rem;
   /*------------------- COLORS -------------------*/
 
   /*------------------- Main Colors -------------------*/
-  $teal: #327b7a;
-  $offwhite: #fdfdfd;
-  $text-color: #403939;
-  $container-color: #fdfdfd;
+  --teal: #327b7a;
+  --offwhite: #fdfdfd;
+  --text-color: #403939;
+  --container-color: #fdfdfd;
 
   /*------------------- Oath Color -------------------*/
-  $oathlight: #6b6278;
-  $oathmedium: #4a4458;
-  $oathdark: #292336;
+  --oathlight: #6b6278;
+  --oathmedium: #4a4458;
+  --oathdark: #292336;
 
   /*------------------- FONTS & TYPOGRAPHY -------------------*/
 
-  $poppins: "Poppins", sans-serif;
-  $quicksand: "Quicksand", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --quicksand: "Quicksand", sans-serif;
 
   /* 0.5pxrem = 8px, 1rem = 16px, 1.5rem = 24px, 2rem = 32px */
-  $big-header: 2rem;
-  $h1-font-size: 1.5rem;
-  $h2-font-size: 1.25rem;
-  $h3-font-size: 1.125rem;
-  $normal-font-size: 0.938rem;
-  $small-font-size: 0.813rem;
-  $smaller-font-size: 0.75;
+  --big-header: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75;
 
   /*--------------------- FONT WEIGHTS ----------------------*/
-  $light: 300;
-  $medium: 400;
-  $regular: 500;
-  $semibold: 600;
-  $bold: 700;
+  --light: 300;
+  --medium: 400;
+  --regular: 500;
+  --semibold: 600;
+  --bold: 700;
 
   /*------------------- MARGINS PADDINGS -------------------*/
   /* Using rem for more scaleability: 0.25pxrem = 4px, 0.5rem = 8px, 0.75rem = 12px, 1rem: 16px */
-  $mb-0-25: 0.25rem;
-  $mb-0-5: 0.5rem;
-  $mb-0-75: 0.75rem;
-  $mb-1: 1rem;
-  $mb-1-5: 1.5rem;
-  $mb-2: 2rem;
-  $mb-2-5: 2.5rem;
-  $mb-3: 3rem;
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
 
   /*------------------- z-index -------------------*/
-  $z-tooltip: 10;
-  $z-fixed: 100;
-  $z-modal: 100;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 100;
 
   /*------------------- FONT SIZE FOR LARGE SCREENS -------------------*/
   /* 0.5pxrem = 8px, 1rem = 16px, 1.5rem = 24px, 2rem = 32px */
   @media screen and (min-width: 968px) {
     :root {
-      $big-header: 3rem;
-      $h1-font-size: 2.25rem;
-      $h2-font-size: 1.5rem;
-      $h3-font-size: 1.25rem;
-      $normal-font-size: 1rem;
-      $small-font-size: 0.875rem;
-      $smaller-font-size: 0.813rem;
+      --big-header: 3rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: 0.875rem;
+      --smaller-font-size: 0.813rem;
     }
   }
 
@@ -92,26 +92,29 @@ html {
 }
 
 body {
-  margin: 0 0 $headerheight 0;
-  font-family: $poppins;
-  background-color: $offwhite;
-  color: $text-color;
+  margin: 0 0 var(--headerheight) 0;
+  font-family: var(--poppins);
+  font-size: var(--normal-font-size);
+  background-color: var(--offwhite);
+  color: var(--text-color);
 }
 
 h1,
 h2,
 h3,
 h4 {
-  color: $text-color;
-  font-weight: $bold;
+  color: var(--text-color);
+  font-weight: var(--bold);
 }
 
-ul {
+ul{
   list-style: none;
 }
 
 a {
   text-decoration: none;
+  color: var(--text-color);
+
 }
 
 img {
@@ -122,19 +125,19 @@ img {
   padding: 2rem 0 4rem;
 }
 
-.section-title {
-  font-size: $h1-font-size;
-  font-weight: $bold;
+.section__title {
+  font-size: var(--h1-font-size);
+  font-weight: var(--bold);
 }
 
-.section-subtitle {
+.section__subtitle {
   display: block;
-  font-size: $small-font-size;
-  margin-bottom: $mb-3;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
 }
 
-.section-title,
-.section-subtitle {
+.section__title,
+.section__subtitle {
   text-align: center;
 }
 
@@ -142,8 +145,8 @@ img {
 
 .container {
   max-width: 768px;
-  margin-left: $mb-1-5;
-  margin-right: $mb-1-5;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
 }
 
 .grid {
